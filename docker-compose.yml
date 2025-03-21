@@ -1,0 +1,25 @@
+version: "3.8"
+name: homelab
+
+include:
+  - apps/homarr/docker-compose.yml
+  - apps/qbittorrent/docker-compose.yml
+  - apps/sshwifty/docker-compose.yml
+
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    env_file: ".env"
+    command: tunnel --no-autoupdate run --token "$CLOUDFLARED_TOKEN"
+    networks:
+      - homelab_network
+    depends_on:
+      - homarr
+      - qbittorrent
+      - sshwifty
+
+networks:
+  homelab_network:
+    driver: bridge
