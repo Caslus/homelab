@@ -6,6 +6,7 @@ include:
   - apps/qbittorrent/docker-compose.yml
   - apps/sshwifty/docker-compose.yml
   - apps/uptimekuma/docker-compose.yml
+  - apps/calibreweb/docker-compose.yml
 
 services:
   cloudflared:
@@ -21,6 +22,7 @@ services:
       - qbittorrent # 8080
       - sshwifty # 8182
       - uptime-kuma # 3001
+      - calibre-web # 8083
 
 networks:
   homelab_network:
