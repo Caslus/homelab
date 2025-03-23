@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  stremio-server:
+    image: stremio/server:latest
+    container_name: stremio-server
+    restart: always
+    ports:
+        - 11470:11470
+        - 12470:12470
+    networks:
+      - homelab_network

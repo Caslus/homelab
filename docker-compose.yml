@@ -7,6 +7,7 @@ include:
   - apps/sshwifty/docker-compose.yml
   - apps/uptime-kuma/docker-compose.yml
   - apps/calibre-web/docker-compose.yml
+  - apps/stremio-server/docker-compose.yml
 
 services:
   cloudflared:
@@ -23,6 +24,7 @@ services:
       - sshwifty # 8182
       - uptime-kuma # 3001
       - calibre-web # 8083
+      - stremio-server # 11470 / 12470
 
 networks:
   homelab_network:
