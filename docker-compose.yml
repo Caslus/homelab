@@ -5,6 +5,7 @@ include:
   - apps/homarr/docker-compose.yml
   - apps/qbittorrent/docker-compose.yml
   - apps/sshwifty/docker-compose.yml
+  - apps/uptimekuma/docker-compose.yml
 
 services:
   cloudflared:
@@ -16,9 +17,10 @@ services:
     networks:
       - homelab_network
     depends_on:
-      - homarr
-      - qbittorrent
-      - sshwifty
+      - homarr # 7575
+      - qbittorrent # 8080
+      - sshwifty # 8182
+      - uptime-kuma # 3001
 
 networks:
   homelab_network:
