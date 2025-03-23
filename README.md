@@ -9,6 +9,8 @@ i will add more stuff to this whenever i have some spare time.
 - **homarr**: homepage
 - **qbittorrent**: torrent client
 - **sshwifty**: remote ssh from the browser
+- **calibre-web**: ebook library
+- **stremio-server**: server for stremio
 
 ## config
 
