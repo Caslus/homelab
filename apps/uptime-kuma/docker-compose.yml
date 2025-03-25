@@ -9,5 +9,6 @@ services:
         - 3001:3001
     volumes:
       - ${DATA}/uptimekuma:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - homelab_network
