@@ -5,11 +5,12 @@ i will add more stuff to this whenever i have some spare time.
 
 ## services
 
+- **calibre-web**: ebook library
 - **cloudflared**: cloudflare tunnel
 - **homarr**: homepage
+- **n8n**: workflow automation
 - **qbittorrent**: torrent client
 - **sshwifty**: remote ssh from the browser
-- **calibre-web**: ebook library
 - **stremio-server**: server for stremio
 
 ## config
