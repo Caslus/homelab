@@ -4,7 +4,7 @@ services:
   stremio-server:
     image: stremio/server:latest
     container_name: stremio-server
-    restart: always
+    restart: unless-stopped
     ports:
         - 11470:11470
         - 12470:12470
