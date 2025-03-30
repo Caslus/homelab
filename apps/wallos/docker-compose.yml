@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  wallos:
+    image: bellamy/wallos:latest
+    container_name: wallos
+    restart: unless-stopped
+    ports:
+        - 8282:80
+    volumes:
+      - ${DATA}/wallos/db:/var/www/html/db
+      - ${DATA}/wallos/logos:/var/www/html/images/uploads/logos
+    networks:
+      - homelab_network

@@ -9,6 +9,7 @@ include:
   - apps/calibre-web/docker-compose.yml
   - apps/stremio-server/docker-compose.yml
   - apps/n8n/docker-compose.yml
+  - apps/wallos/docker-compose.yml
 
 services:
   cloudflared:
@@ -27,6 +28,7 @@ services:
       - calibre-web # 8083
       - stremio-server # 11470 / 12470
       - n8n # 5678
+      - wallos # 8282
 
 networks:
   homelab_network:
