@@ -12,6 +12,9 @@ i will add more stuff to this whenever i have some spare time.
 - **qbittorrent**: torrent client
 - **sshwifty**: remote ssh from the browser
 - **stremio-server**: server for stremio
+- **wallos**: expense tracker
+- **cup**: docker image update watcher
+- **beszel**: monitoring
 
 ## config
 
