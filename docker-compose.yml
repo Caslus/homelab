@@ -11,6 +11,7 @@ include:
   - apps/n8n/docker-compose.yml
   - apps/wallos/docker-compose.yml
   - apps/cup/docker-compose.yml
+  - apps/beszel/docker-compose.yml
 
 services:
   cloudflared:
@@ -31,6 +32,7 @@ services:
       - n8n # 5678
       - wallos # 8282
       - cup # 9000
+      - beszel # 8090
 
 networks:
   homelab_network:
