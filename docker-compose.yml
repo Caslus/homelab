@@ -10,6 +10,7 @@ include:
   - apps/stremio-server/docker-compose.yml
   - apps/n8n/docker-compose.yml
   - apps/wallos/docker-compose.yml
+  - apps/cup/docker-compose.yml
 
 services:
   cloudflared:
@@ -29,6 +30,7 @@ services:
       - stremio-server # 11470 / 12470
       - n8n # 5678
       - wallos # 8282
+      - cup # 9000
 
 networks:
   homelab_network:
