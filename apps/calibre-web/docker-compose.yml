@@ -10,7 +10,7 @@ services:
       - DOCKER_MODS=linuxserver/mods:universal-calibre
     volumes:
       - ${DATA}/calibreweb:/config
-      - ${HOME}/books:/books
+      - ${BOOKS}/books:/books
     ports:
       - 8083:8083
     restart: unless-stopped
