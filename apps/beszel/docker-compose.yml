@@ -11,15 +11,15 @@ services:
       - ${DATA}/beszel/beszel_data:/beszel_data
       - ${DATA}/beszel/beszel_socket:/beszel_socket
 
-  # beszel-agent:
-  #   image: henrygd/beszel-agent:latest
-  #   container_name: beszel-agent
-  #   restart: unless-stopped
-  #   network_mode: host
-  #   volumes:
-  #     - ${DATA}/beszel/beszel_socket:/beszel_socket
-  #     - /var/run/docker.sock:/var/run/docker.sock:ro
-  #   environment:
-  #     LISTEN: /beszel_socket/beszel.sock
-  #     # Do not remove quotes around the key
-  #     KEY: 'UPDATE WITH YOUR PUBLIC KEY (copy from "Add system" dialog)'
+  beszel-agent:
+    image: henrygd/beszel-agent:latest
+    container_name: beszel-agent
+    restart: unless-stopped
+    network_mode: host
+    env_file: ".env"
+    volumes:
+      - ${DATA}/beszel/beszel_socket:/beszel_socket
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      LISTEN: /beszel_socket/beszel.sock
+      KEY: '${AGENT_KEY}'
