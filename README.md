@@ -1,26 +1,64 @@
-# homelab
+# Homelab
 
-this setup is supped to be modular and easy to maintain. each service is defined in its own `docker-compose.yml` file and environment variables. i'm behind a cgnat so i'm using cloudflare zero trust and a tunnel to expose my services to devices outside my network.
-i will add more stuff to this whenever i have some spare time.
+This setup is designed to be modular and easy to maintain. Each service is defined in its own `docker-compose.yml` file with environment variables for configuration. Since I'm behind a CGNAT, I use [Cloudflare Zero Trust](https://www.cloudflare.com/zero-trust/) and a tunnel to expose my services to devices outside my network.
 
-## services
+> **Note:** This is not a tutorial but a personal reference. If you find it useful, feel free to use it. However, many configurations are stored in data folders, environment variables, or the Cloudflare dashboard, which are not included here. I won’t be providing support for this setup, but feel free to reach out if you have questions.
 
-- **calibre-web**: ebook library
-- **cloudflared**: cloudflare tunnel
-- **homarr**: homepage
-- **n8n**: workflow automation
-- **qbittorrent**: torrent client
-- **sshwifty**: remote ssh from the browser
-- **stremio-server**: server for stremio
-- **wallos**: expense tracker
-- **cup**: docker image update watcher
-- **beszel**: monitoring
+---
 
-## config
+## 🚀 Services
 
-the `.env.example` files are my config, i only got the tokens out. so if, for some reason, you want to use this for your homelab:
+These are the services I personally felt a need for, each with its own purpose and functionality, all running in Docker containers. You can find more details in their respective repositories.
 
-- rename `.env.example` files to `.env`
-- fill in the empty variables with whatever is needed
-- setup [cloudflare tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/)
-- `docker compose up -d`
+### 📚 Media & Content Management
+
+- [**Calibre-Web**](https://github.com/janeczku/calibre-web) → Web app for managing e-books.
+- [**Stremio-Server**](https://www.stremio.com/) → Streaming server for media content.
+
+### 🌐 Networking & Remote Access
+
+- [**Cloudflared**](https://github.com/cloudflare/cloudflared) → Secure tunnel to expose local services through Cloudflare.
+- [**Sshwifty**](https://github.com/nirui/sshwifty) → Web-based SSH client for remote access via browser.
+
+### 🔄 Automation & Monitoring
+
+- [**n8n**](https://github.com/n8n-io/n8n) → Workflow automation tool for integrating and automating services.
+- [**Cup**](https://github.com/sergi0g/cup) → Checks for Docker container updates.
+- [**Beszel**](https://github.com/henrygd/beszel) → Lightweight server monitoring hub with historical data, docker stats, and alerts.
+- [**Uptime-Kuma**](https://github.com/louislam/uptime-kuma) → Self-hosted uptime monitoring tool.
+
+### 📊 Productivity & Organization
+
+- [**Homarr**](https://github.com/homarr-labs/homarr) → Customizable dashboard for organizing and accessing services.
+- [**Wallos**](https://github.com/ellite/Wallos) → Personal subscription tracker.
+
+### 📥 Downloads & Storage
+
+- [**qBittorrent**](https://github.com/qbittorrent/qBittorrent) → Web-based BitTorrent client for managing downloads.
+
+---
+
+## 📂 Structure
+
+The folder structure ensures easy maintenance by keeping each service isolated and organized:
+
+```
+/
+├── docker-compose.yml
+├── .env
+├── apps/
+│   ├── <service>/
+│   │   ├── docker-compose.yml
+│   │   ├── .env (when needed)
+├── data/
+│   ├── <service>/
+├── books/
+├── downloads/
+```
+
+- **`docker-compose.yml`** → Main file including all services.
+- **`.env`** → Environment variables for the main `docker-compose.yml` file.
+- **`apps/`** → Each service has its own folder with a `docker-compose.yml` and an optional `.env` file.
+- **`data/`** → Persistent storage, mounted to containers to prevent data loss.
+- **`books/`** → Storage location for Calibre-Web books.
+- **`downloads/`** → Folder for qBittorrent downloads.
