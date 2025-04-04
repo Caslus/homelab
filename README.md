@@ -31,6 +31,7 @@ These are the services I personally felt a need for, each with its own purpose a
 
 - [**Homarr**](https://github.com/homarr-labs/homarr) → Customizable dashboard for organizing and accessing services.
 - [**Wallos**](https://github.com/ellite/Wallos) → Personal subscription tracker.
+- [**Stirling-PDF**](https://github.com/Stirling-Tools/Stirling-PDF) → Web-based PDF manipulation tool.
 
 ### 📥 Downloads & Storage
 

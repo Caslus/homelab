@@ -12,6 +12,7 @@ include:
   - apps/wallos/docker-compose.yml
   - apps/cup/docker-compose.yml
   - apps/beszel/docker-compose.yml
+  - apps/stirling-pdf/docker-compose.yml
 
 services:
   cloudflared:
@@ -33,6 +34,7 @@ services:
       - wallos # 8282
       - cup # 9000
       - beszel # 8090
+      - stirling-pdf # 3038
 
 networks:
   homelab_network:
