@@ -13,6 +13,7 @@ include:
   - apps/cup/docker-compose.yml
   - apps/beszel/docker-compose.yml
   - apps/stirling-pdf/docker-compose.yml
+  - apps/tmodloader/docker-compose.yml
 
 services:
   cloudflared:
@@ -35,6 +36,7 @@ services:
       - cup # 9000
       - beszel # 8090
       - stirling-pdf # 3038
+      - tmodloader # 7785
 
 networks:
   homelab_network:

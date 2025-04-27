@@ -37,6 +37,10 @@ These are the services I personally felt a need for, each with its own purpose a
 
 - [**qBittorrent**](https://github.com/qbittorrent/qBittorrent) → Web-based BitTorrent client for managing downloads.
 
+### 🎮 Game Server
+
+- [**tModLoader**](https://github.com/hexlo/terraria-tmodloader-server) → Modded Terraria server for me and my friends.
+
 ---
 
 ## 📂 Structure

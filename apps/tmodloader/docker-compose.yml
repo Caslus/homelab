@@ -1,0 +1,17 @@
+services:
+  tmodloader:
+    container_name: tmodloader
+    # the laptop i use as a server is a bit weak, so i will only start it when i need it
+    #restart: unless-stopped
+    build:
+      context: .
+      args:
+        UID: 1000
+        GID: 1000
+    tty: true
+    stdin_open: true
+    env_file: ".env"
+    ports:
+      - 7785:7777
+    volumes:
+      - ${DATA}/tmodloader:/home/tml/.local/share/Terraria/tModLoader
