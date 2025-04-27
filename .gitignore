@@ -2,3 +2,7 @@ data/
 books/
 downloads/
 .env
+
+apps/tmodloader/*
+!apps/tmodloader/.env.example
+!apps/tmodloader/docker-compose.yml
