@@ -12,7 +12,7 @@ These are the services I personally felt a need for, each with its own purpose a
 
 ### 📚 Media & Content Management
 
-- [**Calibre-Web**](https://github.com/janeczku/calibre-web) → Web app for managing e-books.
+- [**Komga**](https://github.com/gotson/komga) → Media server for comics, manga, and books.
 - [**Stremio-Server**](https://www.stremio.com/) → Streaming server for media content.
 - [**Fusion**](https://github.com/0x2E/fusion) → RSS reader and aggregator for keeping up with news and content feeds.
 

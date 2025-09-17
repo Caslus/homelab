@@ -6,7 +6,7 @@ include:
   - apps/qbittorrent/docker-compose.yml
   - apps/sshwifty/docker-compose.yml
   - apps/uptime-kuma/docker-compose.yml
-  - apps/calibre-web/docker-compose.yml
+  - apps/komga/docker-compose.yml
   - apps/stremio-server/docker-compose.yml
   - apps/n8n/docker-compose.yml
   - apps/wallos/docker-compose.yml
@@ -30,7 +30,7 @@ services:
       - qbittorrent # 8080
       - sshwifty # 8182
       - uptime-kuma # 3001
-      - calibre-web # 8083
+      - komga # 25600
       - stremio-server # 11470 / 12470
       - n8n # 5678
       - wallos # 8282
