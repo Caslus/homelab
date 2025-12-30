@@ -1,6 +1,7 @@
 data/
 books/
 downloads/
+media/
 .env
 
 apps/tmodloader/*

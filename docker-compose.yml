@@ -2,19 +2,17 @@ version: "3.8"
 name: homelab
 
 include:
-  - apps/homarr/docker-compose.yml
-  - apps/qbittorrent/docker-compose.yml
-  - apps/sshwifty/docker-compose.yml
-  - apps/uptime-kuma/docker-compose.yml
+  - apps/kiss/docker-compose.yml
   - apps/komga/docker-compose.yml
-  - apps/stremio-server/docker-compose.yml
   - apps/n8n/docker-compose.yml
-  - apps/wallos/docker-compose.yml
-  - apps/cup/docker-compose.yml
-  - apps/beszel/docker-compose.yml
-  - apps/stirling-pdf/docker-compose.yml
-#  - apps/tmodloader/docker-compose.yml
-  - apps/fusion/docker-compose.yml
+  - apps/jellyfin/docker-compose.yml
+  - apps/jellyseerr/docker-compose.yml
+  - apps/radarr/docker-compose.yml
+  - apps/sonarr/docker-compose.yml
+  - apps/prowlarr/docker-compose.yml
+  - apps/bazarr/docker-compose.yml
+  - apps/flaresolverr/docker-compose.yml
+  - apps/deluge/docker-compose.yml
 
 services:
   cloudflared:
@@ -26,19 +24,17 @@ services:
     networks:
       - homelab_network
     depends_on:
-      - homarr # 7575
-      - qbittorrent # 8080
-      - sshwifty # 8182
-      - uptime-kuma # 3001
+      - kiss # 8080
       - komga # 25600
-      - stremio-server # 11470 / 12470
       - n8n # 5678
-      - wallos # 8282
-      - cup # 9000
-      - beszel # 8090
-      - stirling-pdf # 3038
-#      - tmodloader # 7785
-      - fusion # 2020
+      - jellyfin # 8096 7359
+      - jellyseerr # 5055
+      - radarr # 7878
+      - sonarr # 8989
+      - prowlarr # 9696
+      - bazarr # 6767
+      - flaresolverr # 8191
+      - deluge # 8112 6881 58846
 
 networks:
   homelab_network:

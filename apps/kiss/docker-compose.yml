@@ -1,0 +1,9 @@
+services:
+  kiss:
+    image: ghcr.io/caslus/kiss:latest
+    container_name: kiss
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${DATA}/kiss:/app/external
+    restart: unless-stopped
