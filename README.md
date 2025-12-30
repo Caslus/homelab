@@ -13,34 +13,25 @@ These are the services I personally felt a need for, each with its own purpose a
 ### 📚 Media & Content Management
 
 - [**Komga**](https://github.com/gotson/komga) → Media server for comics, manga, and books.
-- [**Stremio-Server**](https://www.stremio.com/) → Streaming server for media content.
-- [**Fusion**](https://github.com/0x2E/fusion) → RSS reader and aggregator for keeping up with news and content feeds.
+- [**Jellyfin**](https://github.com/jellyfin/jellyfin) → Media server for movies, TV shows, music, and photos.
+- [**Jellyseerr**](https://github.com/Fallenbagel/jellyseerr) → Media request and management tool for Jellyfin and Emby.
+- [**Radarr**](https://github.com/Radarr/Radarr) → Movie collection manager and downloader.
+- [**Sonarr**](https://github.com/Sonarr/Sonarr) → TV show collection manager and downloader.
+- [**Prowlarr**](https://github.com/Prowlarr/Prowlarr) → Indexer manager/proxy for various torrent and usenet indexers.
+- [**Bazarr**](https://github.com/morpheus65535/bazarr) → Subtitle downloader and manager.
 
 ### 🌐 Networking & Remote Access
 
 - [**Cloudflared**](https://github.com/cloudflare/cloudflared) → Secure tunnel to expose local services through Cloudflare.
-- [**Sshwifty**](https://github.com/nirui/sshwifty) → Web-based SSH client for remote access via browser.
 
 ### 🔄 Automation & Monitoring
 
 - [**n8n**](https://github.com/n8n-io/n8n) → Workflow automation tool for integrating and automating services.
-- [**Cup**](https://github.com/sergi0g/cup) → Checks for Docker container updates.
-- [**Beszel**](https://github.com/henrygd/beszel) → Lightweight server monitoring hub with historical data, docker stats, and alerts.
-- [**Uptime-Kuma**](https://github.com/louislam/uptime-kuma) → Self-hosted uptime monitoring tool.
-
-### 📊 Productivity & Organization
-
-- [**Homarr**](https://github.com/homarr-labs/homarr) → Customizable dashboard for organizing and accessing services.
-- [**Wallos**](https://github.com/ellite/Wallos) → Personal subscription tracker.
-- [**Stirling-PDF**](https://github.com/Stirling-Tools/Stirling-PDF) → Web-based PDF manipulation tool.
+- [**KISS**](https://github.com/Caslus/kiss) → Custom dashboard for monitoring and accessing services.
 
 ### 📥 Downloads & Storage
 
-- [**qBittorrent**](https://github.com/qbittorrent/qBittorrent) → Web-based BitTorrent client for managing downloads.
-
-### 🎮 Game Server
-
-- [**tModLoader**](https://github.com/hexlo/terraria-tmodloader-server) → Modded Terraria server for me and my friends.
+- [**Deluge**](https://github.com/deluge-torrent/deluge) → Web-based BitTorrent client for managing downloads.
 
 ---
 
@@ -59,6 +50,7 @@ The folder structure ensures easy maintenance by keeping each service isolated a
 ├── data/
 │   ├── <service>/
 ├── books/
+├── media/
 ├── downloads/
 ```
 
@@ -66,5 +58,6 @@ The folder structure ensures easy maintenance by keeping each service isolated a
 - **`.env`** → Environment variables for the main `docker-compose.yml` file.
 - **`apps/`** → Each service has its own folder with a `docker-compose.yml` and an optional `.env` file.
 - **`data/`** → Persistent storage, mounted to containers to prevent data loss.
-- **`books/`** → Storage location for Calibre-Web books.
-- **`downloads/`** → Folder for qBittorrent downloads.
+- **`books/`** → Storage location for Komga books.
+- **`media/`** → Storage location for Jellyfin media.
+- **`downloads/`** → Folder for Deluge downloads.
