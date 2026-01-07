@@ -19,6 +19,7 @@ These are the services I personally felt a need for, each with its own purpose a
 - [**Sonarr**](https://github.com/Sonarr/Sonarr) → TV show collection manager and downloader.
 - [**Prowlarr**](https://github.com/Prowlarr/Prowlarr) → Indexer manager/proxy for various torrent and usenet indexers.
 - [**Bazarr**](https://github.com/morpheus65535/bazarr) → Subtitle downloader and manager.
+- [**Profilarr**](https://github.com/Dictionarry-Hub/profilarr) → Profile manager for Radarr and Sonarr to automate quality and release profile management.
 
 ### 🌐 Networking & Remote Access
 
