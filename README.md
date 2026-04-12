@@ -14,7 +14,7 @@ These are the services I personally felt a need for, each with its own purpose a
 
 - [**Komga**](https://github.com/gotson/komga) → Media server for comics, manga, and books.
 - [**Jellyfin**](https://github.com/jellyfin/jellyfin) → Media server for movies, TV shows, music, and photos.
-- [**Jellyseerr**](https://github.com/Fallenbagel/jellyseerr) → Media request and management tool for Jellyfin and Emby.
+- [**Seerr**](https://github.com/seerr-team/seerr) → Media request and management tool for Jellyfin.
 - [**Radarr**](https://github.com/Radarr/Radarr) → Movie collection manager and downloader.
 - [**Sonarr**](https://github.com/Sonarr/Sonarr) → TV show collection manager and downloader.
 - [**Prowlarr**](https://github.com/Prowlarr/Prowlarr) → Indexer manager/proxy for various torrent and usenet indexers.

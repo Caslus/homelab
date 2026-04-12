@@ -6,7 +6,7 @@ include:
   - apps/komga/docker-compose.yml
   - apps/n8n/docker-compose.yml
   - apps/jellyfin/docker-compose.yml
-  - apps/jellyseerr/docker-compose.yml
+  - apps/seerr/docker-compose.yml
   - apps/radarr/docker-compose.yml
   - apps/sonarr/docker-compose.yml
   - apps/prowlarr/docker-compose.yml
@@ -29,7 +29,7 @@ services:
       - komga # 25600
       - n8n # 5678
       - jellyfin # 8096 7359
-      - jellyseerr # 5055
+      - seerr # 5055
       - radarr # 7878
       - sonarr # 8989
       - prowlarr # 9696
