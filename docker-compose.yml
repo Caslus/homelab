@@ -14,6 +14,7 @@ include:
   - apps/profilarr/docker-compose.yml
   - apps/flaresolverr/docker-compose.yml
   - apps/deluge/docker-compose.yml
+  - apps/ezbookkeeping/docker-compose.yml
 
 services:
   cloudflared:
@@ -37,6 +38,7 @@ services:
       - profilarr # 6868
       - flaresolverr # 8191
       - deluge # 8112 6881 58846
+      - ezbookkeeping # 7986
 
 networks:
   homelab_network:

@@ -1,0 +1,14 @@
+---
+version: "2"
+services:
+  ezbookkeeping:
+    image: mayswind/ezbookkeeping
+    container_name: ezbookkeeping
+    env_file: ".env"
+    ports:
+      - "7986:8080"
+    volumes:
+      - ${DATA}/ezbookkeeping/storage:/ezbookkeeping/storage
+      - ${DATA}/ezbookkeeping:/ezbookkeeping/log
+      - ${DATA}/ezbookkeeping/conf:/ezbookkeeping/conf
+      - ${DATA}/ezbookkeeping/data:/ezbookkeeping/data
