@@ -2,6 +2,8 @@ version: "3.8"
 name: homelab
 
 include:
+  - apps/caddy/caddy.yml # 80 443
+  - apps/voidauth.yml # 3000
   - apps/kiss.yml # 8080
   - apps/komga.yml # 25600
   - apps/n8n.yml # 5678

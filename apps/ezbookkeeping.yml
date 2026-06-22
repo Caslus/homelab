@@ -7,8 +7,12 @@ services:
     env_file: "../.env"
     ports:
       - "7986:8080"
+    networks:
+      - homelab_network
     volumes:
       - ${DATA}/ezbookkeeping/storage:/ezbookkeeping/storage
       - ${DATA}/ezbookkeeping:/ezbookkeeping/log
       - ${DATA}/ezbookkeeping/conf:/ezbookkeeping/conf
       - ${DATA}/ezbookkeeping/data:/ezbookkeeping/data
+    extra_hosts:
+      - "auth.lucasphilippe.com:host-gateway"

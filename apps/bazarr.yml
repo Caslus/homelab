@@ -14,4 +14,6 @@ services:
       - ${MEDIA}/anime:/anime
     ports:
       - 6767:6767
+    networks:
+      - homelab_network
     restart: unless-stopped

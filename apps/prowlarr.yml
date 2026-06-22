@@ -11,4 +11,6 @@ services:
       - ${DATA}/prowlarr:/config
     ports:
       - 9696:9696
+    networks:
+      - homelab_network
     restart: unless-stopped

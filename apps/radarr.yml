@@ -12,4 +12,6 @@ services:
       - ${DOWNLOADS}:/downloads
     ports:
       - 7878:7878
+    networks:
+      - homelab_network
     restart: unless-stopped

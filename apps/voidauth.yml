@@ -1,0 +1,16 @@
+services:
+  voidauth: 
+    image: voidauth/voidauth:latest
+    restart: unless-stopped
+    container_name: voidauth
+    volumes:
+      - ${DATA}/voidauth/config:/app/config
+      - ${DATA}/voidauth/db:/app/db
+    networks:
+      - homelab_network
+    ports:
+      - "3000:3000"
+    environment:
+      APP_URL: ${VOIDAUTH_APP_URL}
+      STORAGE_KEY: ${VOIDAUTH_STORAGE_KEY}
+      DB_ADAPTER: sqlite

@@ -1,11 +1,18 @@
 services:
   profilarr:
-    image: santiagosayshey/profilarr:latest
+    image: ghcr.io/dictionarry-hub/profilarr:latest
     container_name: profilarr
+    restart: unless-stopped
     ports:
       - 6868:6868
+    networks:
+      - homelab_network
     volumes:
       - ${DATA}/profilarr:/config
     environment:
-      - TZ=America/Sao_Paulo
-    restart: unless-stopped
+      TZ: ${TZ}
+      AUTH: oidc
+      OIDC_CLIENT_ID: ${PROFILARR_OIDC_CLIENT_ID}
+      OIDC_CLIENT_SECRET: ${PROFILARR_OIDC_CLIENT_SECRET}
+      OIDC_DISCOVERY_URL: ${PROFILARR_OIDC_DISCOVERY_URL}
+      ORIGIN: https://profilarr.${DOMAIN}
