@@ -2,19 +2,19 @@ version: "3.8"
 name: homelab
 
 include:
-  - apps/kiss/docker-compose.yml
-  - apps/komga/docker-compose.yml
-  - apps/n8n/docker-compose.yml
-  - apps/jellyfin/docker-compose.yml
-  - apps/seerr/docker-compose.yml
-  - apps/radarr/docker-compose.yml
-  - apps/sonarr/docker-compose.yml
-  - apps/prowlarr/docker-compose.yml
-  - apps/bazarr/docker-compose.yml
-  - apps/profilarr/docker-compose.yml
-  - apps/flaresolverr/docker-compose.yml
-  - apps/deluge/docker-compose.yml
-  - apps/ezbookkeeping/docker-compose.yml
+  - apps/kiss.yml # 8080
+  - apps/komga.yml # 25600
+  - apps/n8n.yml # 5678
+  - apps/jellyfin.yml # 8096 7359
+  - apps/seerr.yml # 5055
+  - apps/radarr.yml # 7878
+  - apps/sonarr.yml # 8989
+  - apps/prowlarr.yml # 9696
+  - apps/bazarr.yml # 6767
+  - apps/profilarr.yml # 6868
+  - apps/flaresolverr.yml # 8191
+  - apps/deluge.yml # 8112 6881 58846
+  - apps/ezbookkeeping.yml # 7986
 
 services:
   cloudflared:
@@ -25,20 +25,6 @@ services:
     command: tunnel --no-autoupdate run --token "$CLOUDFLARED_TOKEN"
     networks:
       - homelab_network
-    depends_on:
-      - kiss # 8080
-      - komga # 25600
-      - n8n # 5678
-      - jellyfin # 8096 7359
-      - seerr # 5055
-      - radarr # 7878
-      - sonarr # 8989
-      - prowlarr # 9696
-      - bazarr # 6767
-      - profilarr # 6868
-      - flaresolverr # 8191
-      - deluge # 8112 6881 58846
-      - ezbookkeeping # 7986
 
 networks:
   homelab_network:

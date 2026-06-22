@@ -30,6 +30,9 @@ These are the services I personally felt a need for, each with its own purpose a
 - [**n8n**](https://github.com/n8n-io/n8n) → Workflow automation tool for integrating and automating services.
 - [**KISS**](https://github.com/Caslus/kiss) → Custom dashboard for monitoring and accessing services.
 
+### 🧾 Finances
+- [**ezBookkeeping**](https://github.com/mayswind/ezbookkeeping) → Personal finance management tool.
+
 ### 📥 Downloads & Storage
 
 - [**Deluge**](https://github.com/deluge-torrent/deluge) → Web-based BitTorrent client for managing downloads.
